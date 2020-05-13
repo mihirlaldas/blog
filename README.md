@@ -26,6 +26,19 @@ Authentication done using JWT. password saved using md5_hash encruption
     - npm start
 
 ```
+mysql> describe users;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(255) | NO   |     | NULL    |                |
+| email    | varchar(255) | NO   | UNI | NULL    |                |
+| password | varchar(255) | NO   |     | NULL    |                |
+| salt     | varchar(255) | NO   |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+
 mysql> describe blogs;
 +--------------+--------------+------+-----+-------------------+-----------------------------+
 | Field        | Type         | Null | Key | Default           | Extra                       |
@@ -52,4 +65,17 @@ mysql> describe comments;
 | updated_on | datetime | NO   |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |
 +------------+----------+------+-----+-------------------+-----------------------------+
 6 rows in set (0.00 sec)
+
+
+mysql> describe category;
+
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(255) | NO   |     | NULL    |                |
++-------+--------------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+
 ```
