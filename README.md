@@ -1,6 +1,29 @@
 # blog
-Registered user can create new blog post. Update and delete old blogs. Can comment on blogs as well.
 
+Registered user can create new blog post. Update and delete old blogs. Can comment on blogs as well.
+Authentication done using JWT. password saved using md5_hash encruption
+
+## How to run
+
+- First import mihir_blog.sql . you will get all the tables with some data
+  - Tables are Users, blogs, comments, category
+  - user credentials. email - mihir@gmail.com, password - mihir. email - somu@in.com, password - somu.
+- allow CORS . ** gives error if not allowed **
+
+  - [install chrome extension cors](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en)
+
+- start flask app.
+
+  - in your terminal goto blog/backend
+  - run the following commands
+    - export FLASK_ENV=development
+    - export FLASK_APP=server.py
+    - flask run
+
+- start frontend
+  - in your terminal go to frontend
+    - npm i
+    - npm start
 
 ```
 mysql> describe blogs;
